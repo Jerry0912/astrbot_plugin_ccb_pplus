@@ -1,0 +1,68 @@
+{
+  "yw_window": {
+    "description": "触发赛博阳痿的窗口时间（秒）",
+    "type": "int",
+    "default": 60,
+    "hint": "统计多少秒内的调用次数。"
+  },
+  "yw_threshold": {
+    "description": "窗口时间内最大ccb数",
+    "type": "int",
+    "default": 5,
+    "hint": "同一人多少次请求后会被禁用。"
+  },
+  "yw_ban_duration_min_minutes": {
+    "description": "随机养胃最小时长（分钟）",
+    "type": "int",
+    "default": 1,
+    "hint": "触发养胃后，最短禁闭时间。程序内部会自动换算成秒。"
+  },
+  "yw_ban_duration_max_minutes": {
+    "description": "随机养胃最大时长（分钟）",
+    "type": "int",
+    "default": 15,
+    "hint": "触发养胃后，最长禁闭时间。程序内部会自动换算成秒。"
+  },
+  "yw_probability": {
+    "description": "ccb炸膛概率",
+    "type": "float",
+    "default": 0.1,
+    "hint": "仅 ccb 使用。每次 ccb 前，有多大概率触发炸膛。"
+  },
+  "sixty_nine_blowup_probability": {
+    "description": "69玩法己方炸膛概率",
+    "type": "float",
+    "default": 0.1,
+    "hint": "仅69玩法生效，只判定发起者。触发后直接进入禁闭，不进入69对决。"
+  },
+  "reject_probability": {
+    "description": "对方拒绝概率",
+    "type": "float",
+    "default": 0.1,
+    "hint": "每次发起 ccb/榨 时，对方有多大概率直接拒绝。"
+  },
+  "white_list": {
+    "description": "不能进行ccb的id列表",
+    "type": "list",
+    "default": [],
+    "hint": "当目标在此列表中时，不能对其发动玩法。"
+  },
+  "self_ccb": {
+    "description": "是否允许0721",
+    "type": "bool",
+    "default": false,
+    "hint": "为true时当ccb指令未指定对象时进行0721。"
+  },
+  "crit_prob": {
+    "description": "暴击概率",
+    "type": "float",
+    "default": 0.2,
+    "hint": "大多数玩法使用的暴击概率。"
+  },
+  "enable_log": {
+    "description": "完整日志记录",
+    "type": "bool",
+    "default": false,
+    "hint": "是否独立保留每一条ccb记录，包括双方与注入量。"
+  }
+}
